@@ -1,0 +1,9 @@
+<h1><%=@department.name%></h1>
+<% @items.each do |taco| %>
+<ul>
+<li><%= link_to taco.name, department_item_path(taco) %></li>
+</ul>
+<%end%>
+
+rails d controller department
+rails d controller item
