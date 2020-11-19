@@ -1,9 +1,11 @@
-<h1><%=@department.name%></h1>
-<% @items.each do |taco| %>
-<ul>
-<li><%= link_to taco.name, department_item_path(taco) %></li>
-</ul>
-<%end%>
+<h1>Welcome to the <%= @department.name %> Department</h1>
+<hr/>
+<h3><%=@department.description %></h3>
+<h3>Number of Employees:<%=@department.num_of_employees %></h3>
 
-rails d controller department
-rails d controller item
+<p>What would you like to do?</p>
+<%= link_to "View Items", department_items_path(@department)%>
+<br />
+<%= link_to 'Edit Department', edit_department_path(@department) %>
+<br />
+<%= link_to 'Delete Department', @department, method: :delete %>

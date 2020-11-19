@@ -1,4 +1,5 @@
-<h1>Department</h1>
+<h1>Departments</h1>
+<h4><%=link_to "Create New Department", new_department_path %></h4>
 <% @departments.each do |taco| %>
 <ul>
 <li><%= link_to taco.name, taco %></li>

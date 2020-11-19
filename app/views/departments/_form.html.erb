@@ -1,0 +1,14 @@
+<h1><%= @department.id ? 'Edit Sub' : 'Create Sub' %></h1>
+<hr />
+<%= form_for @department do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, autofocus: true %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description, required: true, autofocus: true %>
+
+    <%= f.label :num_of_employees %>
+    <%= f.text_field :num_of_employees, required: true, autofocus: true %>
+
+  <%= f.submit %>
+<% end %>
